@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{99a04e32-5ccc-43d1-b1cd-b0d9e1de7897}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{c6060f9f-c4ea-4cac-a36d-8937b3031bcc}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{e5d601c6-25ba-47d3-96cd-667a9981cc71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Dialog">
+      <UniqueIdentifier>{bffe293b-74b7-40b0-9366-e190c89c015e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{2b69fc68-c86b-488f-a65c-290ac1dd470f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Text">
+      <UniqueIdentifier>{839f7a07-8888-455c-879e-d38cf5afb0ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Generator">
+      <UniqueIdentifier>{24877ac6-e657-4607-8a82-1aeeb4ae6b31}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Debug\moc_makefonts.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_makefonts.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_makefonts.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="makefonts.cpp">
+      <Filter>Source\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="text.cpp">
+      <Filter>Source\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="generator.cpp">
+      <Filter>Source\Generator</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="makefonts.ui">
+      <Filter>Resource</Filter>
+    </CustomBuild>
+    <CustomBuild Include="makefonts.qrc">
+      <Filter>Resource</Filter>
+    </CustomBuild>
+    <CustomBuild Include="makefonts.h">
+      <Filter>Source\Dialog</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_makefonts.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="text.h">
+      <Filter>Source\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="generator.h">
+      <Filter>Source\Generator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MakeFonts.rc">
+      <Filter>Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
