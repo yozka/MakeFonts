@@ -24,11 +24,13 @@ private:
 
 public slots:
 
-	void slot_addTextFile(); //добавление файла с текстом для анализа
+	void slot_addTextFile();	//добавление файла с текстом для анализа
 	void slot_removeTextFile(); //удаление текущего выделеного файла
 	
+	void slot_addFont();		//добавление шрифта
+	void slot_removeFont();		//удаление шрифта
 	
-	void slot_generate(); //генерация выходных файлов
+	void slot_generate();		//генерация выходных файлов
 };
 
 #endif // MAKEFONTS_H

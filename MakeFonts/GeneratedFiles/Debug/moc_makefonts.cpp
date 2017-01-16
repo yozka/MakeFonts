@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MakeFonts_t {
-    QByteArrayData data[5];
-    char stringdata[62];
+    QByteArrayData data[7];
+    char stringdata[91];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,11 +33,14 @@ QT_MOC_LITERAL(0, 0, 9), // "MakeFonts"
 QT_MOC_LITERAL(1, 10, 16), // "slot_addTextFile"
 QT_MOC_LITERAL(2, 27, 0), // ""
 QT_MOC_LITERAL(3, 28, 19), // "slot_removeTextFile"
-QT_MOC_LITERAL(4, 48, 13) // "slot_generate"
+QT_MOC_LITERAL(4, 48, 12), // "slot_addFont"
+QT_MOC_LITERAL(5, 61, 15), // "slot_removeFont"
+QT_MOC_LITERAL(6, 77, 13) // "slot_generate"
 
     },
     "MakeFonts\0slot_addTextFile\0\0"
-    "slot_removeTextFile\0slot_generate"
+    "slot_removeTextFile\0slot_addFont\0"
+    "slot_removeFont\0slot_generate"
 };
 #undef QT_MOC_LITERAL
 
@@ -47,7 +50,7 @@ static const uint qt_meta_data_MakeFonts[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -55,11 +58,15 @@ static const uint qt_meta_data_MakeFonts[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   29,    2, 0x0a /* Public */,
-       3,    0,   30,    2, 0x0a /* Public */,
-       4,    0,   31,    2, 0x0a /* Public */,
+       1,    0,   39,    2, 0x0a /* Public */,
+       3,    0,   40,    2, 0x0a /* Public */,
+       4,    0,   41,    2, 0x0a /* Public */,
+       5,    0,   42,    2, 0x0a /* Public */,
+       6,    0,   43,    2, 0x0a /* Public */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -74,7 +81,9 @@ void MakeFonts::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         switch (_id) {
         case 0: _t->slot_addTextFile(); break;
         case 1: _t->slot_removeTextFile(); break;
-        case 2: _t->slot_generate(); break;
+        case 2: _t->slot_addFont(); break;
+        case 3: _t->slot_removeFont(); break;
+        case 4: _t->slot_generate(); break;
         default: ;
         }
     }
@@ -106,13 +115,13 @@ int MakeFonts::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 5)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 3;
+        _id -= 5;
     }
     return _id;
 }

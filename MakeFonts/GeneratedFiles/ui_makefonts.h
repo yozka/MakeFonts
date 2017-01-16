@@ -47,6 +47,11 @@ public:
     QWidget *tab_fonts;
     QVBoxLayout *verticalLayout;
     QTableWidget *tableFonts;
+    QWidget *widget_4;
+    QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *butAddFont;
+    QPushButton *butRemoveFont;
     QWidget *widget_3;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_2;
@@ -92,6 +97,7 @@ public:
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         tableTexts = new QTableWidget(tab_text);
         tableTexts->setObjectName(QStringLiteral("tableTexts"));
+        tableTexts->setSelectionBehavior(QAbstractItemView::SelectRows);
         tableTexts->horizontalHeader()->setStretchLastSection(true);
 
         verticalLayout_2->addWidget(tableTexts);
@@ -128,20 +134,47 @@ public:
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         tableFonts = new QTableWidget(tab_fonts);
+        if (tableFonts->columnCount() < 1)
+            tableFonts->setColumnCount(1);
         if (tableFonts->rowCount() < 1)
             tableFonts->setRowCount(1);
-        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
-        tableFonts->setVerticalHeaderItem(0, __qtablewidgetitem);
         tableFonts->setObjectName(QStringLiteral("tableFonts"));
+        tableFonts->setSelectionBehavior(QAbstractItemView::SelectRows);
         tableFonts->setRowCount(1);
-        tableFonts->setColumnCount(0);
+        tableFonts->setColumnCount(1);
         tableFonts->horizontalHeader()->setVisible(false);
-        tableFonts->horizontalHeader()->setCascadingSectionResizes(true);
-        tableFonts->horizontalHeader()->setProperty("showSortIndicator", QVariant(true));
+        tableFonts->horizontalHeader()->setCascadingSectionResizes(false);
+        tableFonts->horizontalHeader()->setHighlightSections(true);
+        tableFonts->horizontalHeader()->setProperty("showSortIndicator", QVariant(false));
         tableFonts->horizontalHeader()->setStretchLastSection(true);
         tableFonts->verticalHeader()->setVisible(false);
+        tableFonts->verticalHeader()->setHighlightSections(true);
 
         verticalLayout->addWidget(tableFonts);
+
+        widget_4 = new QWidget(tab_fonts);
+        widget_4->setObjectName(QStringLiteral("widget_4"));
+        horizontalLayout_4 = new QHBoxLayout(widget_4);
+        horizontalLayout_4->setSpacing(6);
+        horizontalLayout_4->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
+        horizontalSpacer_3 = new QSpacerItem(578, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_3);
+
+        butAddFont = new QPushButton(widget_4);
+        butAddFont->setObjectName(QStringLiteral("butAddFont"));
+
+        horizontalLayout_4->addWidget(butAddFont);
+
+        butRemoveFont = new QPushButton(widget_4);
+        butRemoveFont->setObjectName(QStringLiteral("butRemoveFont"));
+
+        horizontalLayout_4->addWidget(butRemoveFont);
+
+
+        verticalLayout->addWidget(widget_4);
 
         tabWidget->addTab(tab_fonts, QString());
 
@@ -191,8 +224,8 @@ public:
         butAddTextFile->setText(QApplication::translate("MakeFontsClass", "Add...", 0));
         butRemoveTextFile->setText(QApplication::translate("MakeFontsClass", "Remove", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab_text), QApplication::translate("MakeFontsClass", "Text", 0));
-        QTableWidgetItem *___qtablewidgetitem = tableFonts->verticalHeaderItem(0);
-        ___qtablewidgetitem->setText(QApplication::translate("MakeFontsClass", "\320\235\320\276\320\262\320\260\321\217 \321\201\321\202\321\200\320\276\320\272\320\260", 0));
+        butAddFont->setText(QApplication::translate("MakeFontsClass", "Add...", 0));
+        butRemoveFont->setText(QApplication::translate("MakeFontsClass", "Remove", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab_fonts), QApplication::translate("MakeFontsClass", "Fonts", 0));
         butGenerate->setText(QApplication::translate("MakeFontsClass", "Generate", 0));
         butClose->setText(QApplication::translate("MakeFontsClass", "Close", 0));
